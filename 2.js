@@ -6,8 +6,8 @@ const name = [
     'Ella', 'Faith', 'Olivia', 'Penelope'];
 
 const searchName = (a, b, c) => {
-    let filterNama = name.filter(nama => nama.toLowerCase().includes(a));
-    filterNama.length = b;
+    let filterNama = name.filter(nama => nama.toLowerCase().includes(a.toLowerCase()));
+    b = filterNama.length;
     return c(filterNama);
 }
 
@@ -15,4 +15,4 @@ const callback = (key) => {
     return key;
 }
 
-console.log(searchName('an', 2, callback));
+console.log(searchName('Ca', 3, callback));
